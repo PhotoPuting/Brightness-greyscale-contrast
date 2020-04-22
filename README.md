@@ -15,6 +15,6 @@ if __name__ == "__main__":
 ```
 
 ## Reference:
-<strong>`class BGC:`</strong>
-`img_url: string: name of your image (default=input.jpg)`
+<strong>`class BGC:`</strong> <br>
+`img_url: string: name of your image (default=input.jpg)` <br>
 `show_img_after: bool: show image after the process (default=False)`
