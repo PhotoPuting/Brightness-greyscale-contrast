@@ -12,6 +12,7 @@ class BGC:
 
         self.process()
     
+
     def get_relevant_pixels(self) -> list:
         relevant_pixels = []
         for x in range(self.width):
@@ -23,7 +24,13 @@ class BGC:
         
         return relevant_pixels
     
+    def __check_format(self):
+        if not self.img_url.lower().endswith(".jpg"):
+            raise AttributeError("Wrong image format")
+        return
+
     def process(self):
+        self.__check_format()
         greyscale_img = self.img.convert("LA")
         new_img = Image.new("RGB", greyscale_img.size)
         new_img.paste(greyscale_img)
